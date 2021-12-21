@@ -3,8 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiTests.TapContentPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome" FontSize="32" TextColor="Red" HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ContentView>
+            <ContentView.GestureRecognizers>
+                <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="OnTapped">
+                </TapGestureRecognizer>
+            </ContentView.GestureRecognizers>
+            <Label Text="Content here" />
+        </ContentView>
     </ContentPage.Content>
 </ContentPage>

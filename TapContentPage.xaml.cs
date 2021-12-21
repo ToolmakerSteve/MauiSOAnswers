@@ -15,5 +15,10 @@ namespace MauiTests
 		{
 			InitializeComponent();
 		}
+
+		protected void OnTapped(object sender, EventArgs args)
+		{
+			// Do something here.
+		}
 	}
 }
