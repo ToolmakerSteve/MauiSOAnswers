@@ -49,6 +49,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="test.txt" />
+	  <None Remove="TestWeb.html" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiAsset Include="test.txt" />
+	  <MauiAsset Include="TestWeb.html" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="MauiAssetPage.xaml.cs">
+	    <DependentUpon>MauiAssetPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="MauiAssetPage.xaml">
+	    <Generator></Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="TapContentPage.xaml">
 	    <Generator></Generator>
 	  </MauiXaml>
@@ -57,6 +76,14 @@
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
 		<OutputType>WinExe</OutputType>
 		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-windows10.0.19041|AnyCPU'">
+	  <DefineConstants>WINDOWS</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-windows10.0.19041|AnyCPU'">
+	  <DefineConstants>WINDOWS</DefineConstants>
 	</PropertyGroup>
 	
 </Project>

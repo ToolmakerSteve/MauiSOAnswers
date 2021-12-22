@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTests.FrameWithHeaderLabelPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView HeightRequest="20" />
+            <!-- Without Grid, the Frame takes the whole width. -->
+            <!-- To have multiple buttons in one row, use more Grid columns. -->
+            <!-- Border will be more convenient once it works. -->
+            <Grid ColumnDefinitions="Auto,*">
+                <!-- "Padding 6" of outer frame determines how thick the Border color is. -->
+                <Frame HasShadow="False" CornerRadius="18" Padding="6" BackgroundColor="#F69927">
+                    <!-- "Padding 2" of inner frame is white space surrounding the label. -->
+                    <Frame HasShadow="False" CornerRadius="12" BackgroundColor="White" Padding="6,2">
+                        <Label Text="{Binding LabelText}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       TextColor="Blue"/>
+                    </Frame>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

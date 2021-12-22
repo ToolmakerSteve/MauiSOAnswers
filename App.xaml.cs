@@ -12,7 +12,9 @@ namespace MauiTests
 			InitializeComponent();
 
 			//MainPage = new MainPage();
-			MainPage = new TapContentPage();
+			//MainPage = new TapContentPage();
+			//MainPage = new FrameWithHeaderLabelPage();
+			MainPage = new MauiAssetPage();
 		}
 	}
 }
