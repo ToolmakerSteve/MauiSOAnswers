@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiTests.MauiAssetPage">
     <ContentPage.Content>
+        <!-- By the time Maui is released, this is all you will need. -->
+        <!-- The Init code-behind won't be needed. -->
         <WebView x:Name="MyWebView" Source="TestWeb.html" />
     </ContentPage.Content>
 </ContentPage>
