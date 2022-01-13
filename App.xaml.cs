@@ -14,7 +14,8 @@ namespace MauiTests
 			//MainPage = new MainPage();
 			//MainPage = new TapContentPage();
 			//MainPage = new FrameWithHeaderLabelPage();
-			MainPage = new MauiAssetPage();
+			//MainPage = new MauiAssetPage();
+			MainPage = new Login();
 		}
 	}
 }

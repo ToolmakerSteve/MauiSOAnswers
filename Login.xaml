@@ -82,8 +82,7 @@
             </Label>
 
         </StackLayout>
-        <StackLayout>
-            <Button Text="LOGIN"
+        <Button Text="LOGIN"
                     MaximumHeightRequest="45"
                     CornerRadius="10"
                     HeightRequest="45"
@@ -93,7 +92,7 @@
                     Command="{Binding LoginCommand}"/>
 
 
-            <Button Text="Dont have an account? Register here!"
+        <Button Text="Dont have an account? Register here!"
                     MaximumHeightRequest="45"
                     CornerRadius="10"
                     HeightRequest="45"
@@ -101,6 +100,5 @@
                     BackgroundColor="#620774"
                     Margin="2"
                     Command="{Binding RegisterCommand}"/>
-        </StackLayout>
     </StackLayout>
 </ContentPage>
