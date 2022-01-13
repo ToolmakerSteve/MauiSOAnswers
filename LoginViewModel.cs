@@ -1,6 +1,7 @@
 ﻿using Microsoft.Maui.Controls;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,25 +32,26 @@ namespace MauiTests
 
 		public LoginViewModel()
 		{
-			System.Console.WriteLine("INSIDE LOGIN VIEWMODEL");
+			Debug.WriteLine("\n--- LoginViewModel ---\n");
+
 			LoginCommand = new Command(UserLogin);
 			RegisterCommand = new Command(NewUser);
 			ForgotPassword = new Command(ResetPassword);
 		}
 
+		public async void UserLogin(object obj)
+		{
+			Debug.WriteLine("\n--- UserLogin ---\n");
+		}
+
 		private void ResetPassword(object obj)
 		{
-			throw new NotImplementedException();
+			Debug.WriteLine("\n--- ResetPassword ---\n");
 		}
 
 		private void NewUser(object obj)
 		{
-			throw new NotImplementedException();
-		}
-
-		public async void UserLogin(object obj)
-		{
-			throw new NotImplementedException();
+			Debug.WriteLine("\n--- NewUser ---\n");
 		}
 	}
 }

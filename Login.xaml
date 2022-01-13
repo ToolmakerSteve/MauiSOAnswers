@@ -26,15 +26,6 @@
                     </Grid.ColumnDefinitions>
 
                     <!--Email Address-->
-                    <Image 
-                        GridLayout.Column="0"
-                        GridLayout.Row="0"
-                        Source="email.png"
-                           Aspect="AspectFit"
-                           VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           WidthRequest="20"
-                           HeightRequest="35"/>
 
                     <Entry
                         GridLayout.Column="1"
@@ -49,15 +40,6 @@
 
 
                     <!--Password-->
-                    <Image Source="key.png"
-                           Aspect="AspectFit"
-                        GridLayout.Column="0"
-                           GridLayout.Row="1"
-                           VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           WidthRequest="20"
-                           HeightRequest="35"/>
-
                     <Entry
                         GridLayout.Column="1"
                         GridLayout.Row="1"
