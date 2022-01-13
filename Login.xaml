@@ -14,6 +14,65 @@
                     BackgroundColor="#620774"
                     Command="{Binding LoginCommand}"/>
 
+        <StackLayout Margin="10" Padding="20" VerticalOptions="EndAndExpand">
+
+            <Border Stroke="#620774"
+                    StrokeThickness="4"
+                    Padding="16,8"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="Center">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5,5,5,5" BackgroundColor="Transparent"/>
+                </Border.StrokeShape>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Email Address-->
+
+                    <Entry
+                        GridLayout.Column="1"
+                        GridLayout.Row="0"
+                        PlaceholderColor="#9d2888"
+                        Margin="4,0,0,0"
+                        TextColor="Black"
+                        HeightRequest="50"
+                        Placeholder="Email Address"
+                        Keyboard="Email"/>
+
+
+
+                    <!--Password-->
+                    <Entry
+                        GridLayout.Column="1"
+                        GridLayout.Row="1"
+                        HeightRequest="50"
+                        Margin="4,0,0,0"
+                        PlaceholderColor="#9d2888"
+                        TextColor="Black"
+                        Placeholder="Password"
+                        IsPassword="True"/>
+
+                </Grid>
+            </Border>
+
+            <Label Text="Forgot Password?"
+                   HorizontalOptions="Center"
+                   Margin="0,15,0,15"
+                   VerticalOptions="StartAndExpand"
+                   TextColor="#0052FF">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ForgotPassword}"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+        </StackLayout>
 
 
         <Button Text="Dont have an account? Register here!"
