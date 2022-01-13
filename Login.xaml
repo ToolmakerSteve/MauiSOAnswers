@@ -19,7 +19,6 @@
             <Label Text="Forgot Password?"
                    HorizontalOptions="Center"
                    Margin="0,15,0,15"
-                   VerticalOptions="StartAndExpand"
                    TextColor="#0052FF">
             </Label>
 
