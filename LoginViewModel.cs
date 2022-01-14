@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace MauiTests
 {
@@ -26,9 +27,9 @@ namespace MauiTests
 		}
 
 		//Commands
-		public Command LoginCommand { get; set; }
-		public Command RegisterCommand { get; set; }
-		public Command ForgotPassword { get; set; }
+		public ICommand LoginCommand { get; set; }
+		public ICommand RegisterCommand { get; set; }
+		public ICommand ForgotPassword { get; set; }
 
 		public LoginViewModel()
 		{
@@ -39,17 +40,17 @@ namespace MauiTests
 			ForgotPassword = new Command(ResetPassword);
 		}
 
-		public async void UserLogin(object obj)
+		public async void UserLogin()
 		{
 			Debug.WriteLine("\n--- UserLogin ---\n");
 		}
 
-		private void ResetPassword(object obj)
+		private void ResetPassword()
 		{
 			Debug.WriteLine("\n--- ResetPassword ---\n");
 		}
 
-		private void NewUser(object obj)
+		private void NewUser()
 		{
 			Debug.WriteLine("\n--- NewUser ---\n");
 		}
